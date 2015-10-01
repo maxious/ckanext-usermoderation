@@ -1,0 +1,11 @@
+{% ckan_extends %}
+{% block styles %}
+  {{ super() }}
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"  type="text/css">
+
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+  {% resource 'ckanext-usermoderation/script/usermoderation.js' %}
+      <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+{% endblock %}

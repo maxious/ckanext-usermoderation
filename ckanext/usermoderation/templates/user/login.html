@@ -1,0 +1,31 @@
+{% ckan_extends %}
+
+{% block help_register %}
+{% endblock %}
+{% block secondary_content %}
+  {% if h.check_access('user_create') %}
+    <section class="module module-narrow module-shallow">
+      <h2 class="module-heading">{{ _('Need an Account?') }}</h2>
+      <div class="module-content">
+        <p>{% trans %}Apply on the button below{% endtrans %}</p>
+        <p class="action">
+          <a class="btn" data-module="request-account" data-module-href="example@example.com">{{ _('Request an Account') }}</a>
+        </p>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="module module-narrow module-shallow">
+    <h2 class="module-heading">{{ _('Forgotten your password?') }}</h2>
+    <div class="module-content">
+      <p>{% trans %}No problem, use our password recovery form to reset it.{% endtrans %}</p>
+      <p class="action">
+        <a class="btn" href="{{ h.url_for(controller='user', action='request_reset') }}">{{ _('Forgot your password?') }}</a>
+      </p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block form %}
+  {% snippet "user/snippets/login_form.html", action=h.url_for('login_by_email'), error_summary=error_summary %}
+{% endblock %}
