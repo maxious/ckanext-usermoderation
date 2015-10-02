@@ -1,0 +1,8 @@
+.account-request .popover {
+ min-width: 722px;
+}
+.account-request .controls select, .account-request .controls input {
+
+float: right;
+    margin-top: -33px;
+}

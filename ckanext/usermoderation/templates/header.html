@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+{% block header_account_notlogged %}
+    <li>{% link_for _('Log in / Register'), controller='user', action='login' %}</li>
+{% endblock %}
+{% block header_account_logged %}
+
+{% if c.userobj.sysadmin %}
+
+    <li>
+        <a href="{{ h.url_for('account_requests') }}" title="{{ _('Account requests') }}">
+            <i class="icon-user"> Account requests</i>({{ h.count_account_requests() }})
+        </a>
+    </li>
+{% endif %}
+{{ super() }}
+{% endblock %}

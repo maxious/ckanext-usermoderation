@@ -17,13 +17,13 @@
         <tr>
             <td style="width: 30%; ">
                 <div class="control-group  control-select"><label class="" for="role"><span
-                        title="This field is required" class="control-required">*</span> Level of Organization Access Requested</label>
+                        title="This field is required" class="control-required">*</span> Level of Access Requested</label>
                 </div>
             </td>
             <td style="text-align:right;"><div class="control-medium"><select id="role" name="role" required="required">
                 <option value="admin" selected="">Organization Admin</option>
-                <option value="editor" selected="">Organization Editor</option>
-                <option value="member" selected="">Organization Member</option>
+                <option value="editor">Organization Editor</option>
+                <option value="member">Organization Member</option>
             </select></div></td>
         </tr>
         <tr>
@@ -38,11 +38,11 @@
         <tr>
             <td colspan="2" style="text-align: right;">
                 <div class="control-group ">
-                    <div class="controls"><input id="field-agree" type="checkbox" name="agree" value="1" required="required" style="float:left;"/>
-                        <label class="checkbox" for="field-agree" style="padding-left:0;">
+                    <div class="controls">
+                        <label class="checkbox" for="field-agree" style="padding-left:0;text-align: left;">
 
                         Please check this box to confirm you accept and agree with <A href="/about" target="_blank">Terms
-                        of Use</a></label>  </div>
+                        of Use</a></label> <input id="field-agree" type="checkbox" name="agree" value="1" required="required"/> </div>
                 </div>
             </td>
         </tr>
